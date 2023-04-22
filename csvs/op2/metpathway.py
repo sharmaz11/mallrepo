@@ -394,7 +394,7 @@ for i in range(0,phase1.shape[1]-1):
 count=0
 list1=[]
 for i in range(0,phase1_2.shape[1]):
-    for j in range((i+1),6):
+    for j in range((i+1),phase1_2.shape[1]):
         tf.keras.backend.clear_session()
         df=phase1_2.iloc[:,[i,j]]
         print(df.columns)
@@ -408,22 +408,22 @@ for i in range(0,phase1_2.shape[1]):
         #list1.append(a)
         dat.to_csv(sys.argv[3],mode="a",header=False,index=False)
         count+=1
-count=0 
-for i in range(0,phase1_3.shape[1]-1):
-    for j in range((i + 1), phase1_3.shape[1]):
-        tf.keras.backend.clear_session()
-        df=phase1_3.iloc[:,[i,j]]
-        print(df.columns)
-        history_YX,history_X,history_XY,history_Y,results_YX,results_XY,gene1,gene2=causality(df,df,8,110,80,0.16,2)
-        #print(count)
-        a=results(history_YX,history_X,history_XY,history_Y,results_YX,results_XY,gene1,gene2)
-        a.get_causality()
-        #print(a.results_YX,"\n",a.results_XY)
-        dat=pd.DataFrame([[a.gene1,a.gene2,a.tag,a.lag,a.pval]],columns=["gene1","gene2","tag","lag","pval"])
-        print(dat)
-        #list1.append(a)
-        dat.to_csv(sys.argv[4],mode="a",header=False,index=False)
-        count+=1
+#count=0 
+#for i in range(0,phase1_3.shape[1]-1):
+    #for j in range((i + 1), phase1_3.shape[1]):
+     #   tf.keras.backend.clear_session()
+      #  df=phase1_3.iloc[:,[i,j]]
+      #  print(df.columns)
+      #  history_YX,history_X,history_XY,history_Y,results_YX,results_XY,gene1,gene2=causality(df,df,8,110,80,0.16,2)
+      #  #print(count)
+      #  a=results(history_YX,history_X,history_XY,history_Y,results_YX,results_XY,gene1,gene2)
+      #  a.get_causality()
+        ##print(a.results_YX,"\n",a.results_XY)
+       # dat=pd.DataFrame([[a.gene1,a.gene2,a.tag,a.lag,a.pval]],columns=["gene1","gene2","tag","lag","pval"])
+       # print(dat)
+        ##list1.append(a)
+       # dat.to_csv(sys.argv[4],mode="a",header=False,index=False)
+        #count+=1
 
 
 

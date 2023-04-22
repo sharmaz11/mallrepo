@@ -17,8 +17,8 @@ for file in $(<$subd); do
 	echo $x$opn
 
 
-	screen -dm -S "meta"$x python3 metpathway.py $fbn $x$opn1 $y$opn2 $z$opn3
-#	python3 metpathway.py $fbn $x$opn1 $y$opn2 $z$opn3
+	screen -dm -S "meta"$x python3 metpathway.py $fbn $fbn$x$opn1 $fbn$y$opn2 $fbn$z$opn3
+#	python3 metpathway.py $fbn $fbn$x$opn1 $fbn$y$opn2 $z$opn3
 #	read -p "Press enter to continue"
 
 	x=$(( $x + 1 ))

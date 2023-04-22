@@ -1,0 +1,15 @@
+Sirt6,Slc2a6,0,0,0
+Sirt6,Slc4a4,0,0,0
+Sirt6,Stat3,0,0,0
+Sirt6,Tkfc,0,0,0
+Sirt6,Tpi1,0,0,0
+Slc2a6,Slc4a4,0,0,0
+Slc2a6,Stat3,0,0,0
+Slc2a6,Tkfc,0,0,0
+Slc2a6,Tpi1,0,0,0
+Slc4a4,Stat3,0,0,0
+Slc4a4,Tkfc,0,0,0
+Slc4a4,Tpi1,0,0,0
+Stat3,Tkfc,0,0,0
+Stat3,Tpi1,YX,2,0.0005281981341198616
+Tkfc,Tpi1,0,0,0
